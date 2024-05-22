@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body,
+        html,
+        .centainer {
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            margin: 0;
+            background: linear-gradient(to bottom right, var(--back-color1), var(--back-color2));
+
+        }
+
+        nav {
+            height: 100%;
+            width: 100vw;
+            margin: auto;
+        }
+
+        .nav {
+            height: 10vh;
+            width: 100vw;
+            position: relative;
+            margin: auto;
+        }
+        .right-nav{
+            margin-right: 20px;
+        }
+
+
+
+        .main-section {
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 100px;
+            position: relative;
+            gap: 40px;
+            /* flex-wrap: wrap; */
+        }
+
+        .image-part {
+            width: 40vw;
+            min-height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: sticky;
+            top: 5px;
+            border: 3px solid var(--text-color);
+            border-radius: 25px;
+            max-width: 1200px;
+
+        }
+
+        .image-section {
+            height: 80%;
+            width: 45vw;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-section img {
+            height: 80%;
+        }
+
+        .other-img {
+            height: 20%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .other-img img {
+            height: 100%;
+            width: 25%;
+            border-radius: 13px 13px;
+            border: 2px solid var(--text-color);
+        }
+
+        /* detail section css start from here */
+
+
+        .detail-part {
+            width: 55vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        .detail-part h1 {
+            font-size: 50px;
+        }
+
+        .price-part {
+            height: 100px;
+            width: 100%;
+            padding: 10px;
+            padding-top: 15px;
+            border: 2px solid var(--text-color);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .price-part h5 {
+            font-size: 20px;
+        }
+
+        #price {
+            position: absolute;
+            top: -17px;
+            font-size: 15px;
+            background-color: #D4D5F3;
+            width: 60px;
+            font-weight: 1000;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .card-section {
+            display: flex;
+            gap: 10px;
+            font-size: 25px;
+            width: 100%;
+        }
+
+        .count {
+            display: flex;
+            gap: 2px;
+            border: 2px solid var(--text-color);
+            border-radius: 10px;
+        }
+
+        #count-no {
+            padding-top: 5px;
+        }
+
+        .count button {
+            /* padding: 5px 10px; */
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            font-weight: 300;
+            border: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #decrise {
+            padding-bottom: 5px;
+        }
+
+        #increase {
+            padding-bottom: 3px;
+        }
+
+        .addtocart {
+            width: 100%;
+            height: 45px;
+        }
+
+        .addtocart button {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            background-color: transparent;
+            transition: all ease-in 0.4s;
+        }
+
+        .addtocart button:hover {
+            font-size: 23px;
+        }
+
+        #menu-icon {
+            top: 25px;
+            font-size: 2rem;
+        }
+
+
+
+
+        @media screen and (max-width:1500px) {
+            .main-section {
+                gap: 20px;
+                padding: 20px 0px;
+
+            }
+
+            .image-section {
+                height: 80%;
+                width: 100%;
+            }
+
+            .menu-div {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width:1350px) {
+            .main-section {
+                padding: 50px 70px;
+            }
+
+            .menu-div {
+                display: none;
+            }
+            .image-section{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:1240px) {
+            .main-section {
+                flex-wrap: wrap;
+                gap: 40px;
+            }
+
+            .detail-part {
+                width: 50vw;
+            }
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .image-section{
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+
+            .menu-div {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:1080px) {
+            .main-section {
+                gap: 40px;
+            }
+
+            .menu-div {
+                display: none;
+            }
+            .left-nav h1 {
+                font-size: 1.8rem;
+            }
+
+            .left-nav img {
+                height: 80px;
+                width: 80px;
+            }
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .image-section img{
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width:970px) {
+            .main-section {
+                gap: 40px;
+                padding: 20px 50px;
+            }
+
+            .image-part {
+                width: 45vw;
+                height: 60vh;
+            }
+
+            .image-section img,
+            .image-section {
+                height: 40vh;
+                width: 100%;
+            }
+
+            .detail-part {
+                width: 50vw;
+            }
+
+            .left-nav h1 {
+                font-size: 1.8rem;
+            }
+
+            .left-nav img {
+                height: 80px;
+                width: 80px;
+            }
+            .image-section,.image-section img{
+                width: 100%;
+            }
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width:770px) {
+            .main-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .image-part {
+                position: static;
+                width: 100%;
+                height: 80vh;
+            }
+
+            .image-section {
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+            }
+
+            .image-section img {
+                height: 100%;
+                width: 80vw;
+
+            }
+
+            .other-img {
+                height: 20vh;
+                width: 100%;
+            }
+
+            .other-img img {
+                height: inherit;
+                width: 25%;
+
+            }
+
+            .detail-part {
+                width: 100%;
+            }
+
+            .detail-part h1 {
+                font-size: 40px;
+            }
+
+            .price-part {
+                /* height: 90px; */
+                width: 100%;
+            }
+
+            .price-part h5 {
+                font-size: 20px;
+            }
+
+            #count-no,
+            .count button {
+                padding-top: 1px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card-section {
+                height: 30px;
+            }
+
+            .count button {
+                height: 30px;
+                width: 30px;
+            }
+
+            .addtocart {
+                height: 30px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+            
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:520px) {
+            .main-section {
+                gap: 40px;
+                padding: 20px 40px;
+            }
+
+            .image-part {
+                height: 55vh;
+            }
+
+            .image-section {
+                height: 40vh;
+            }
+
+            .other-img {
+                height: 10vh;
+            }
+
+            .detail-part h1 {
+                font-size: 30px;
+            }
+
+            .detail-part h5 {
+                font-size: 20px;
+            }
+            
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width:450px) {
+            .main-section {
+                padding: 30px 10px;
+                gap: 40px;
+            }
+
+            /* .image-part{
+                height: 40vh;
+            }
+            .image-section img{ 
+                height: 30vh;
+            } */
+            .other-img img {
+                height: 10vh;
+            }
+
+            .price-part h5 {
+                font-size: 18px;
+            }
+            
+            .image-part {
+                height: 70%;
+                position: relative;
+                width: 100%;
+            }
+            .detail-part{
+                width: 100%;
+            }
+        }
+
+
+        /* nav responsive start from here */
+
+
+        @media(min-width: 1280px) {
+            .right-nav {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <nav>
+                <div class="left-nav">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <h1>happy bags</h1>
+                </div>
+                <div class="center-nav">
+                    <h5>home</h5>
+                    <h5>new launch</h5>
+                    <h5>categorize</h5>
+                    <h5>about</h5>
+                </div>
+                <div class="right-nav">
+                    <input type="text"></input>
+                    <i class="ri-search-line"></i>
+                    <div class="cart-btn">
+                        <a href="cart.html">
+                            <i class="ri-shopping-cart-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <button onclick="menu()">
+                <i class="ri-menu-line" id="menu-icon"></i>
+            </button>
+        </div>
+        <div class="line"></div>
+        <div class="main-section">
+            <div class="image-part">
+                <div class="image-section">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                </div>
+                <div class="other-img">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                </div>
+            </div>
+            <div class="detail-part">
+                <h1>bags name</h1>
+                <div class="price-part">
+                    <h5>MRP <span style="text-decoration: line-through;">₹1500</span><br>₹1000 Inclusive of all taxes
+                    </h5>
+                    <h5>you save₹500</h5>
+                    <h6 id="price">price</h6>
+                </div>
+
+                <div class="card-section">
+                    <div class="count">
+                        <button type="button" id="increase" onclick="increase()">+</button>
+                        <h3 id="count-no">1</h3>
+                        <button type="button" id="decrise" onclick="decrease()">-</button>
+                    </div>
+                    <div class="addtocart">
+                        <button onclick="addcard('p1',`${no}`)">Add to Cart</button>
+                    </div>
+                </div>
+                <h3>discription</h3>
+                <p>Elevate your school story with a backpack that's as trendy as your ambitions. Smartly designed,
+                    brilliantly spacious-ready for your daily triumphs! </p>
+                <h3>features</h3>
+                <ul>
+                    <li>Air Mesh</li>
+                    <li>Inside bottle pocket</li>
+                    <li>laptop container</li>
+                    <li>1 Year International Warranty</li>
+                </ul>
+
+                <h3>size and dimensions</h3>
+                <p>
+                    Height: 28 Cms<br>
+                    Length: 16 Cms<br>
+                    Width: 46 Cms<br>
+                    Capacity: 25L Liters
+                </p>
+
+                <h3>material care</h3>
+                <p>Consider a monthly routine of a quick wipe-down or brushing. If you used water to wash your fabric
+                    pack,
+                    hang your pack to dry completely before putting it into action again. use cool water with a soft
+                    damp
+                    cloth to wipe down the interior and exterior of your pack, Never use bleach or harsh detergents on
+                    your
+                    bag. And remember to avoid any suede or leather trim on your pack as these areas could discolor if
+                    they
+                    get wet</p>
+
+                <h3>return policy</h3>
+                <p>contact in 24 house and email our website customer care </p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="feature-part"></div>
+        <div class="line"></div>
+        <div class="footer"></div>
+        <!-- here menu bar code -->
+    </div>
+
+    <div class="menu-div">
+        <h1 class="likns-menu">home</h1>
+        <h1 class="likns-menu">new launch</h1>
+        <h1 class="likns-menu">categorize</h1>
+        <h1 class="likns-menu">about</h1>
+        <div class="search-div">
+            <input type="text"></input>
+            <i class="ri-search-line " id="search-btn"></i>
+            <div class="user-nav-button" onclick="openlogin()">
+                <i class="ri-user-3-line" id="logo-svg"></i>
+            </div>
+            <div class="cart-btn">
+                <a href="cart.html">
+                    <i class="ri-shopping-cart-line"></i>
+                </a>
+            </div>
+        </div>
+        <button id="close" onclick="closemenu()">x</button>
+    </div>
+    <script>
+        const count = document.getElementById("count-no");
+        var no = 1;
+        function increase() {
+            no++
+            count.innerHTML = no;
+        }
+        function decrease() {
+            if (no > 1) {
+                no--;
+                count.innerHTML = no;
+            }
+        }
+
+        function cart(pid) {
+            localStorage.setItem('pidandcount', `${pid},${no}`);
+
+        }
+
+    </script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

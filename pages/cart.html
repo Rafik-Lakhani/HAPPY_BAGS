@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --back-color1: rgb(244, 238, 255);
+            --back-color2: rgb(166, 177, 225);
+            --text-color: rgb(66, 72, 116);
+            --text-color-light: rgba(223, 225, 232, 0.94);
+            --text-color-dark: rgb(49, 54, 93);
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+            text-transform: capitalize;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            color: var(--text-color);
+            padding: 20px;
+            background: linear-gradient(to bottom right, var(--back-color1), var(--back-color2));
+            min-height: 100%;
+        }
+
+        .item {
+            width: 75%;
+            height: 100%;
+            min-height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid var(--text-color);
+            border-radius: 25px;
+            padding: 30px;
+        }
+
+        .nocart-div {
+            height: 100%;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .total {
+            width: 25%;
+            border: 2px solid var(--text-color);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            height: 42vh;
+            min-height: 50%;
+        }
+
+        .product {
+            height: 10vh;
+            min-height: 10vh;
+            width: 100%;
+            background-color: var(--back-color1);
+        }
+
+
+
+        .bill {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            margin-top: 20px;
+            font-size: 20px;
+            width: 100%;
+            padding: 0px 10px;
+        }
+
+        .item-count,
+        .save,
+        .othercharge,
+        .lastvalue {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border: 1px solid var(--text-color);
+            border-radius: 20px;
+            padding: 3px 5px;
+
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-color);
+            margin: 0px, 20px;
+        }
+
+        /* product card css code */
+
+        .cart-product {
+            height: 25vh;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            overflow: hidden;
+            min-height: 20vh;
+            justify-content: space-between;
+            font-size: 1.4rem;
+        }
+
+        .left-cart {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            overflow: hidden;
+
+        }
+
+        #image-cart {
+            height: 100%;
+            width: 30%;
+            scale: 1.3;
+        }
+
+        .partision {
+            height: 100%;
+            width: 2px;
+            margin: 0px 2vw 0px 0px;
+            background-color: var(--text-color);
+        }
+
+        .name-part {
+            height: 100%;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2vh 0px;
+        }
+
+        .name-part select,
+        button {
+            height: 3vh;
+            border-radius: 4px;
+            background-color: var(--text-color);
+            color: var(--back-color1);
+        }
+
+        .name-part button {
+            width: 4vw;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+        }
+
+        .price-sec {
+            height: 100%;
+            width: auto;
+            font-size: 1rem;
+            font-weight: 900;
+            padding-top: 2vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="nocart-div">
+                <img src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" alt=""
+                    style="height:35vh;  width: 20vw;">
+                <h2> 👻no any product👻</h2>
+                <h5>please add product in cart</h5>
+            </div>
+
+
+
+        </div>
+        <div class="total">
+            <h1>total amount</h1>
+            <div class="bill">
+                <div class="item-count">
+                    <h4>total count</h4>
+                    <span id="totalamout">₹0</span>
+                </div>
+                <div class="save">
+                    <h4>you save</h4>
+                    <span id="saveamout">₹0</span>
+                </div>
+                <div class="othercharge">
+                    <h4>other</h4>
+                    <span id="otheramout">₹0</span>
+                </div>
+                <div class="line"></div>
+                <div class="lastvalue">
+                    <h4>last amount</h4>
+                    <span id="lastamout">₹0</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const obj = {
+            p1: {
+                name: "girls bags1",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p2: {
+                name: "girls bags2",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p3: {
+                name: "girls bags3",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p4: {
+                name: "girls bags4",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p5: {
+                name: "girls bags5",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p6: {
+                name: "girls bags6",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p7: {
+                name: "girls bags7",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            },
+            p8: {
+                name: "girls bags8",
+                amonut: 1200,
+                img: "/image/Designer__5_-removebg-preview.png"
+            }
+        }
+
+        var totalamountofprd;
+        var item = [];
+        var totalcount=1;
+
+        
+        function showitem() {
+            
+            if (localStorage.length != 0) {
+                console.log("call");
+                for (var i = 1; i <= localStorage.length; i++) {
+                    var itemid = localStorage.key(i)
+                    
+                    
+                            // this is a new dic process start form here 
+                            
+                            const itemDiv = document.querySelector(".item")
+                            // console.log(obj[itemid].img);
+                            
+                            
+                            const newDiv = document.createElement("div");
+                            newDiv.className = "cart-product"
+                            itemDiv.appendChild(newDiv);
+                            
+                                newDiv.innerHTML +=
+                                    `
+                            <div class="left-cart">
+                                    <img src=${obj[itemid].img} alt="" srcset="" id="image-cart">
+                                
+                                     <div class="partision">
+                                         </div>
+                                         <div class="name-part">
+                                                 <h3>${obj[itemid].name}</h3>
+                                                 <div class="wrap-sec">
+                                            
+                                                         <select name="count" id="countitem">
+                                                                 <option value="1" >1</option>
+                                                                 <option value="2">2</option>
+                                                                 <option value="3">3</option>
+                                                                 <option value="4">4</option>
+                                                                 <option value="5">5</option>
+                                                             </select>
+                                                             <button value="remove" onclick="totalamount(${item[i + 1]})">
+                                                                         remove
+                                                                 </button>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="price-sec">
+                                                             <span style="font-size: 1.4rem;">
+                                                                      ₹${obj[itemid].amonut * totalcount}
+                                                                  </span>
+                                                             </div>
+                                                                    `;
+                                                            
+                                                            
+                                                        }
+                                                    }
+                                                    
+                                                    
+      else {
+                const noitem = document.querySelector('.nocart-div');
+
+                noitem.style.display = "flex";
+                
+            }
+
+
+            if(selectcount.value>localStorage.getItem(itemid)){
+                            totalcount=selectcount.value;
+            }
+             else{
+                                totalcount=localStorage.getItem(itemid)
+          }
+        }
+        
+        showitem();
+        
+        function totalamount(prdid) {
+            localStorage.removeItem(prdid);
+            document.querySelector(".cart-product").style.display = "none";
+            console.log("call");
+            showitem();
+        }
+        
+        const selectcount = document.querySelector("#countitem");
+         console.log(selectcount);
+
+
+
+    </script>
+</body>
+
+</html>

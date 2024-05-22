@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Happy Bag Shop - Your Satisfaction Our First Priority</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <nav>
+                <div class="left-nav">
+                    <img src="image/Designer__5_-removebg-preview.png" alt="">
+                    <h1>happy bags</h1>
+                </div>
+                <div class="center-nav">
+                    <h5>home</h5>
+                    <h5>new launch</h5>
+                    <h5>categorize</h5>
+                    <h5>about</h5>
+                </div>
+                <div class="right-nav">
+                    <input type="text"></input>
+                    <i class="ri-search-line"></i>
+                    <div class="user-nav-button" onclick="openlogin()">
+                        <i class="ri-user-3-line" id="logo-svg"></i>
+                    </div>
+                    <div class="cart-btn">
+                        <a href="./pages/cart.html" target="_blank">
+                            <i class="ri-shopping-cart-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <button onclick="menu()" id="menu-icon">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </nav>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="center">
+            <div class="main-content">
+
+
+                <div class="left-center">
+                    <div class="heading">
+                        <span>you buy</span>
+                        <span id="change-item">
+
+                        </span>
+                    </div>
+                    <div class="description">
+
+                        <p> welcome into our bag shop, a haven in surendranagar where style meets practicality. Discover
+                            a curated collection ranging from chic handbags to sleek office bags and travel companions.
+                            Elevate your professional look with our sophisticated office bags, marrying fashion
+                            andfunctionality. For the globetrotters, our travel bags boast durability, thoughtful design
+                            and style.</p>
+                    </div>
+                </div>
+                <div class="right-center">
+                    <img src="https://skybags.co.in/cdn/shop/files/BPSDSC06GRN.png?v=1698405704" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="second-page">
+            <div class="heading-sec">
+                <h1>top selling </h1>
+            </div>
+
+            <div class="card-sec">
+                <div class="card" id="card1">
+                    <a href="/pages/bags1.html" target="_blank">
+                        <div class="card-img">
+                            <img src="https://m.media-amazon.com/images/I/619gGitgILL._AC_UY1100_.jpg" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h2>bagd name</h2>
+                        </div>
+                        <div class="key-feture">
+                            high quality material &nbsp
+                            stylish design
+                        </div>
+
+                        <div class="price">
+                            <span> ₹1000</span>
+                        </div>
+
+                        <div class="button-card">
+                            <button id="cart" onclick="addcard('p1')" class="addcard">add to card</button>
+                            <button id="buy">buy now </button>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- this is second card -->
+                <div class="card" id="card2">
+                    <a href="/pages/bags1.html" target="_blank">
+                        <div class="card-img">
+                            <img src="https://m.media-amazon.com/images/I/619gGitgILL._AC_UY1100_.jpg" alt="">
+
+                        </div>
+                        <div class="card-heading">
+                            <h2>bagd name</h2>
+                        </div>
+                        <div class="key-feture">
+                            high quality material &nbsp
+                            stylish design
+                        </div>
+
+                        <div class="price">
+                            <span> ₹1000</span>
+
+                        </div>
+
+                        <div class="button-card">
+                            <button id="cart" class="addcard" onclick="addcard('p2')">add to card</button>
+                            <button id="buy">buy now </button>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- this is a therd card  -->
+
+                <div class="card" id="card3">
+                    <a href="/pages/bags1.html" target="_blank">
+                        <div class="card-img">
+                            <img src="https://m.media-amazon.com/images/I/619gGitgILL._AC_UY1100_.jpg" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h2>bagd name</h2>
+                        </div>
+                        <div class="key-feture">
+                            high quality material &nbsp
+                            stylish design
+                        </div>
+
+                        <div class="price">
+                            <span> ₹1000</span>
+
+                        </div>
+
+                        <div class="button-card">
+                            <button class="addcard" id="cart" onclick="addcard('p3')">add to card</button>
+                            <button id="buy">buy now </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- the third page coding -->
+
+        <div class="therd-page">
+            <div class="glass-part">
+                <div class="detail-office">
+                    <h1>leather style office bag</h1>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reiciendis magni dolorum, ducimus
+                        veniam sed fugiat suscipit nesciunt, consequatur quis officia iusto provident in. Provident vel
+                        alias pariatur quibusdam aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+                        officiis.
+                    </h4>
+                </div>
+
+                <div class="wrap">
+                    <i class="ri-arrow-left-circle-fill" id="left"></i>
+                    <div class="bags" id="active">
+
+                        <img src="./image/Designer__5_-removebg-preview.png""
+                            alt="">
+                        <div class=" partision">
+                    </div>
+                    <div class="bags-name">
+                        <h3>office bags</h3>
+                        <span id="price">
+                            ₹120
+                        </span>
+                        <button class="addcard" onclick="addcard('p4')">add to card</button>
+                    </div>
+                </div>
+                <div class="bags">
+
+                    <img src="./image/Designer__5_-removebg-preview.png" alt="">
+                    <div class="partision"></div>
+                    <div class="bags-name">
+                        <h3>office bags1</h3>
+                        <span id="price">
+                            ₹1200
+                        </span>
+                        <button class="addcard" onclick="addcard('p5')">add to card</button>
+                    </div>
+                </div>
+                <div class="bags">
+
+                    <img src="./image/Designer__5_-removebg-preview.png""
+                            alt="">
+                        <div class=" partision">
+                </div>
+                <div class="bags-name">
+                    <h3>office bags2</h3>
+                    <span id="price">
+                        ₹100
+                    </span>
+                    <button class="addcard" onclick="addcard('p6')">add to card</button>
+                </div>
+            </div>
+            <div class="bags">
+
+
+                <img src="./image/Designer__5_-removebg-preview.png""
+                            alt="">
+                        
+                        <div class=" partision">
+            </div>
+            <div class="bags-name">
+                <h3>office bags3</h3>
+                <span id="price">
+                    ₹12
+                </span>
+                <button class="addcard" onclick="addcard('p7')">add to card</button>
+            </div>
+        </div>
+        <i class="ri-arrow-right-circle-fill" id="right"></i>
+    </div>
+    </div>
+    </div>
+
+    <div class="line"></div>
+    <!-- forth page stating  -->
+    <div class="forth">
+
+        <!-- <div class="line"></div> -->
+        <div class="footer">
+            <div class="links">
+                <h5><a href="#">home</a></h5>
+                <h5><a href="#">new launch</a></h5>
+                <h5><a href="#">all bags</a></h5>
+                <h5><a href="#">about</a></h5>
+                <h5><a href="#">constact</a></h5>
+            </div>
+
+            <h4>Copyright © 2024 Happy Bags Pvt Ltd. All Rights Reserved.</h4>
+
+        </div>
+    </div>
+    <!-- here menu code start from here -->
+    <div class="menu-div">
+        <h1 class="likns-menu">home</h1>
+        <h1 class="likns-menu">new launch</h1>
+        <h1 class="likns-menu">categorize</h1>
+        <h1 class="likns-menu">about</h1>
+        <div class="search-div">
+            <input type="text"></input>
+            <i class="ri-search-line " id="search-btn"></i>
+            <div class="user-nav-button" onclick="openlogin()">
+                <i class="ri-user-3-line" id="logo-svg"></i>
+            </div>
+            <div class="cart-btn">
+                <a href="./pages/cart.html">
+                    <i class="ri-shopping-cart-line"></i>
+                </a>
+            </div>
+        </div>
+        <button id="close" onclick="closemenu()">x</button>
+
+    </div>
+    </div>
+
+
+
+    <!-- login page start frome here -->
+
+    <div class="login-page">
+        <div class="form-login">
+            <h1>login</h1>
+            <button onclick="closelogin()" class="btn-cln"><i class="ri-close-circle-fill"></i></button>
+            <form action="" id="loginform">
+                <label for="lnguseremail">email</label>
+                <input type="email" id="lnguseremail" required>
+                <label for="lngpass">password</label>
+                <input type="password" required id="lngpass">
+                <div class="row-flex">
+                    <input type="checkbox" name="remember me" class="checkbox">
+                    <label for="checkbox" id="chkbox">remember me</label>
+                    <label for="">forgot password?</label>
+                </div>
+
+                <input type="submit" value="login" id="loginbtn" onclick="loginuser()">
+
+                <label for="" id="registersmlbtn">don't have account? <span onclick="openregister()">register</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- registerpage coding start -->
+
+    <div class="register-page">
+        <div class="form-register">
+            <h1>register</h1>
+            <button onclick="closeregister()" class="btn-cln"><i class="ri-close-circle-fill"></i></button>
+            <form action="" id="registerform">
+                <label for="username">username</label>
+                <input type="text" id="username" required>
+                <label for="phonenm">phone number</label>
+                <input type="tel" pattern="[0-9]{10}" maxlength="10" id="phonenm" required>
+                <label for="useremail">email</label>
+                <input type="email" id="useremail" required>
+                <label for="password">password</label>
+                <input type="password" required id="password">
+                <div class="row-flex">
+                    <input type="checkbox" name="remember me" class="checkbox" required>
+                    <label for="checkbox" id="tnc">i agree to the terms & conditions</label>
+
+                </div>
+
+                <input type="submit" value="register" id="registerbtn" onclick="registeruser()">
+                <label for="" id="logingsmlbtn">already have an account? <span onclick="openlogin()">login</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
