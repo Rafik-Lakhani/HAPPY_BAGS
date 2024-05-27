@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NIKE Men Logo Print Backpack</title>
     <link rel="stylesheet" href="/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
@@ -61,7 +61,7 @@
         }
 
         .image-section {
-            height: 80%;
+            height: 100%;
             width: 45vw;
             align-self: center;
             display: flex;
@@ -71,7 +71,10 @@
         }
 
         .image-section img {
-            height: 80%;
+            height: 90%;
+            width: 80%;
+            overflow: hidden;
+            border-radius: 25px;
         }
 
         .other-img {
@@ -104,7 +107,7 @@
         }
 
         .detail-part h1 {
-            font-size: 50px;
+            font-size: 35px;
         }
 
         .price-part {
@@ -190,7 +193,7 @@
         }
 
         .addtocart button:hover {
-            font-size: 23px;
+            background-color: var(--back-color2);
         }
 
         #menu-icon {
@@ -204,7 +207,7 @@
         @media screen and (max-width:1500px) {
             .main-section {
                 gap: 20px;
-                padding: 20px 0px;
+                padding: 50px 70px;
 
             }
 
@@ -275,12 +278,21 @@
                 width: 80px;
             }
             .image-part {
-                height: 70%;
                 position: relative;
                 width: 100%;
             }
+
+            .image-section{
+                height: 600px;
+                width: 100%;
+            }
+            .other-img{
+                width: 100%;
+                height: 200px;
+            }
             .image-section img{
                 width: 100%;
+                height: 100%;
             }
             .detail-part{
                 width: 100%;
@@ -365,7 +377,7 @@
             }
 
             .other-img img {
-                height: inherit;
+                height: 200px;
                 width: 25%;
 
             }
@@ -435,9 +447,12 @@
             .image-section {
                 height: 40vh;
             }
-
-            .other-img {
-                height: 10vh;
+            .other-img{
+                height: 150px;
+                width: 100%;
+            }
+            .other-img img{
+                height:100%;
             }
 
             .detail-part h1 {
@@ -464,15 +479,12 @@
                 padding: 30px 10px;
                 gap: 40px;
             }
-
-            /* .image-part{
-                height: 40vh;
+            .other-img{
+                height: 120px;
+                width: 100%;
             }
-            .image-section img{ 
-                height: 30vh;
-            } */
             .other-img img {
-                height: 10vh;
+                height: 100%;
             }
 
             .price-part h5 {
@@ -533,21 +545,21 @@
         <div class="main-section">
             <div class="image-part">
                 <div class="image-section">
-                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230623/m861/6494b091d55b7d0c63a2d288/-473Wx593H-464360535-grey-MODEL.jpg" alt="" id="mainimage">
                 </div>
                 <div class="other-img">
-                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
-                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
-                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
-                    <img src="/image/Designer__5_-removebg-preview.png" alt="">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230623/0D4j/6494b091d55b7d0c63a2d211/-473Wx593H-464360535-grey-MODEL2.jpg" id="image1" onclick="changeimg(1)">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230623/xVwW/6494b0a7d55b7d0c63a2d304/-473Wx593H-464360535-grey-MODEL7.jpg" id="image2"  onclick="changeimg(2)">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230623/62vw/6494b091d55b7d0c63a2d20f/-473Wx593H-464360535-grey-MODEL4.jpg" id="image3"  onclick="changeimg(3)">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230623/YoGz/6494b091d55b7d0c63a2d217/-473Wx593H-464360535-grey-MODEL3.jpg" id="image4"  onclick="changeimg(4)">
                 </div>
             </div>
             <div class="detail-part">
-                <h1>bags name</h1>
+                <h1>TIGER MARRON Genuine Leather Everyday Backpack</h1>
                 <div class="price-part">
-                    <h5>MRP <span style="text-decoration: line-through;">₹1500</span><br>₹1000 Inclusive of all taxes
+                    <h5>MRP <span style="text-decoration: line-through;">₹4300</span><br>₹3870 Inclusive of all taxes
                     </h5>
-                    <h5>you save₹500</h5>
+                    <h5>you save₹430</h5>
                     <h6 id="price">price</h6>
                 </div>
 
@@ -558,7 +570,7 @@
                         <button type="button" id="decrise" onclick="decrease()">-</button>
                     </div>
                     <div class="addtocart">
-                        <button onclick="addcard('p1',`${no}`)">Add to Cart</button>
+                        <button onclick="addcard('p5',`${no}`)">Add to Cart</button>
                     </div>
                 </div>
                 <h3>discription</h3>
@@ -636,8 +648,17 @@
         }
 
         function cart(pid) {
-            localStorage.setItem('pidandcount', `${pid},${no}`);
+            localStorage.setItem(`${pid}`, `${no}`);
+            // document.querySelector(".addtocart").style.backgroundColor="var(--text-color)"
+            // document.querySelector(".addtocart").style.color="var(--back-color1)"
 
+        }
+
+        function changeimg(imgid){
+            prvimg=document.querySelector("#mainimage").src;
+            nextimg=document.querySelector(`#image${imgid}`).src;
+            document.querySelector("#mainimage").src=nextimg;
+            document.querySelector(`#image${imgid}`).src=prvimg;
         }
 
     </script>

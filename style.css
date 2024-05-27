@@ -256,14 +256,18 @@ nav>.center-nav {
 }
 
 @keyframes animate {
-
+    35%{
+        border: none;
+    }
     60%,
     30% {
         left: 100%;
+        width: 60%;
     }
 
     100% {
         left: 0%;
+        width: 100%;
     }
 }
 
@@ -299,6 +303,7 @@ nav>.center-nav {
 
 .heading-sec>h1 {
     text-transform: capitalize;
+
 }
 
 .card-sec {
@@ -346,13 +351,18 @@ nav>.center-nav {
     min-height: 60%;
     height: 280px;
     width: 100%;
+    width: 100%;
     margin: auto;
     border-radius: 25px;
     object-fit: cover;
+    overflow: hidden;
 }
-.card-img > img{
+
+
+.card-img > a >img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .card-heading h2{
@@ -393,17 +403,19 @@ nav>.center-nav {
 
 #cart {
     padding: 10px 40px;
-    background-color: var(--back-color2);
+    background-color: var(--back-color2);    
+    transition: all ease 0.3s;
+    text-transform: capitalize;
 }
-/* 
+
 #cart:hover{
-    background-color: var(--text-color-dark);
-    color: var(--text-color-light);
+    background-color: rgba(178, 178, 42, 0.311);
+    color: black;
 }
 #buy:hover{
-    background-color: var(--back-color2);
-    color: var(--text-color-dark);
-} */
+    background-color: slategrey;
+    color:white;
+}
 
 
 
@@ -411,7 +423,8 @@ nav>.center-nav {
     padding: 10px 50px;
     background-color: var(--text-color-dark);
     color: var(--text-color-light);
-
+    transition: all ease 0.3s;
+    text-transform: capitalize;
 }
 
 
@@ -457,6 +470,7 @@ nav>.center-nav {
 .wrap {
     min-height: 90%;
     height: 90%;
+    height: 550px;
     width: 40%;
     min-width: 40%;
     /* overflow: hidden; */
@@ -468,7 +482,7 @@ nav>.center-nav {
 
 #active {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .bags {
@@ -476,10 +490,11 @@ nav>.center-nav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 20px;
     padding-bottom: 5px;
-    gap: 20px;
+    padding-top: 5px;
+    gap: 10px;
     border-radius: 20px;
     margin: auto;
     --text-color-dark: rgba(31, 31, 35, 0.5);
@@ -492,12 +507,13 @@ nav>.center-nav {
 
 
 .bags>img {
-    height: 250px;
+    height: 400px;
     width: 100%;
     /* transform: scale(1.5); */
     align-self: center;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .partision {
@@ -507,8 +523,8 @@ nav>.center-nav {
 }
 
 .bags-name {
-    font-size: 1.75rem;
-    height: auto;
+    font-size: 1.3rem;
+    height: 190px;
     width: auto;
     position: relative;
     display: flex;
@@ -519,7 +535,7 @@ nav>.center-nav {
 #price {
     font-weight: 900;
     margin-top: 5px;
-    font-size: 1.75rem;
+    font-size: 1.3rem;
 }
 
 .bags>.bags-name>button {
@@ -635,6 +651,7 @@ nav>.center-nav {
     padding: 50px;
     position: absolute;
     margin: auto;
+    top: 60px;
     border-radius: 50px;
     border:  3px solid var(--text-color);
     background-color: var(--back-color1);
@@ -889,10 +906,17 @@ form span{
     }
     .wrap{
         width: 50%;
+        
     }
 
     .wrap .bags-name h3,#price,.addcard{
         font-size: 1.95rem;
+    }
+    .bags > img{
+        height: 340px;
+    }
+    .bags-name{
+        height: 200px;
     }
 }
 
@@ -942,6 +966,12 @@ form span{
     .card{
         font-size: 0.91rem;
     }
+
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 1.5rem;
+       }
     .button-card{
         margin-top: 10px;
     }
@@ -966,6 +996,12 @@ form span{
     .wrap{
         min-height: 90%;
         height: 90%;
+    }
+    .bags > img{
+        height: 340px;
+    }
+    .bags-name{
+        height: 200px;
     }
 
     .bags-name h3,#price{
@@ -1030,6 +1066,11 @@ form span{
         font-size: 1rem;
         padding: 5px 0px;
     }
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 1.2rem;
+       }
    .bags img{
     height: 200px;
     width: 100%;
@@ -1124,6 +1165,11 @@ form span{
     .card-img{
         height: 150px;
     }
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 1rem;
+       }
     .detail-office h1{
         font-size: 0.9rem;
     }
@@ -1133,18 +1179,15 @@ form span{
     }
 
     .bags img{
-        height: 150px;
+        height: 300px;
         width: 100%;
        }
     .bags{
-        height: 300px;
+        height: 400px;
         padding: 10PX 5px;
         gap: 5px;
     }
   
-
-
-
     .bags .bags-name button{
         font-size: 0.8rem;
         margin-top: 10px;
@@ -1216,6 +1259,12 @@ form span{
         height: 140px;
     }
 
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 0.8rem;
+       }
+
     .therd-page{
         padding: 20px;
     }
@@ -1228,12 +1277,12 @@ form span{
     }
 
     .bags img{
-        height: 130px;
+        height: 350px;
         width: 100%;
        }
 
     .bags{
-        height: 250px;
+        height: 320px;
         padding: 10PX 5px;
         gap: 3px;
     }
@@ -1245,6 +1294,7 @@ form span{
 
     .bags-name{
         margin-top: 5px;
+        height: 200px;
     }
     #cart,  #buy{
         height: auto;
@@ -1265,6 +1315,9 @@ form span{
 
     .button-card button{
         border-radius: 8px;
+    }
+    .bags-name h3,.price{
+        font-size: 0.8rem;
     }
 
     .footer{
@@ -1369,6 +1422,11 @@ form span{
     .card-sec{
         padding: 10px;
     }
+
+    .bags-name h3,.price{
+        font-size: 0.8rem;
+    }
+
     .forth{
         padding: 10px;
     }
@@ -1530,12 +1588,18 @@ form span{
         min-width: 100%;
         max-width: 100%;
     }
-    .heading-sec h1{
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 2rem;
+       }
+    .heading-sec h2{
         font-size: 2rem;
     }
 
     .card .card-img{
         height: 300px;
+        
     }
 
     .card{
@@ -1582,8 +1646,11 @@ form span{
         width: 90%;
     }
     .bags{
-        height: 300px;
+        height: 400px;
         gap: 10px;
+    }
+    .bags img{
+        height: 300px;
     }
 
     #left,#right{
@@ -1596,9 +1663,7 @@ form span{
         margin-left: 5px
     }
 
-    .wrap .bags img{
-        height: 200px;
-    }
+    
     .bags .bags-name h3 , #price{
         font-size: 1.5rem;
     }
@@ -1748,7 +1813,11 @@ form span{
     .card .card-img,.card-img > img{
         height: 270px;
     }
-
+    .card-heading h2{
+        margin-top: 5px;
+        color: var(--text-color);
+        font-size: 1.8rem;
+       }
 
 
 
@@ -1759,7 +1828,7 @@ form span{
     }
     .menu-div{
         padding: 10px;
-        height: 50vh;
+        height: 70vh;
         gap:30px;
         width: 100%;
         right: -100%;
@@ -1788,6 +1857,10 @@ form span{
         width: 40px;
 
     }
+    .wrap,.bags{
+        height: 400px;
+    }
+    
 
 
     .search-div{
@@ -1800,6 +1873,16 @@ form span{
     .cart-btn a i,.user-nav-button i{
         font-size: 2rem;
         
+    }
+    #left{
+        margin-right: 0px;
+        transform: translateX(-180%);
+    }
+    #right{
+        margin-left: 0px;
+    }
+    #left,#right{
+        font-size: 1.5rem;
     }
 
     .form-login,.form-register{

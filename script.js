@@ -1,3 +1,5 @@
+const islogin=false
+
 function openlogin(){
     document.querySelector('.login-page').style.display="flex";
   closeregister();
@@ -31,9 +33,9 @@ function registeruser(){
         const password=document.querySelector("#password");
         
         localStorage.setItem("usernm",usernm.value);
-        localStorage.setItem("phonenm",phonenm.value);
+        localStorage.setItem("userphonenm",phonenm.value);
         localStorage.setItem("useremail",useremail.value);
-        localStorage.setItem("password",password.value);
+        localStorage.setItem("userpassword",password.value);
         gotoindex();
         alert("succesfully register");
         
@@ -54,6 +56,7 @@ function loginuser(){
     if(lngemail.value==localStorage.getItem("useremail") && lngpass.value==localStorage.getItem("password")){
         gotoindex();
         alert("successfully login");
+         islogin=true;
     }
     else{ alert("invailide username");}
 }
@@ -135,24 +138,29 @@ document.querySelector("#right").addEventListener("click",function next() {
 
 // here add card start now 
 
-const cartdbtn =document.querySelector(".addcard" );
 function addcard(pid,count=1)
  {
     localStorage.setItem(`${pid}`,`${count}`);
-    console.log(pid);
-    console.log(count);
-
-
-    cartdbtn.style.backgroundColor="var(--text-color-dark)"
-    cartdbtn.style.color="--text-color-light"
-
-   setTimeout(()=>{
-    console.log("funtion run");
-    cartdbtn.style.backgroundColor="var(--back-color2)"
-    cartdbtn.style.color="--text-color"
-   },200)
-    
 }
+
+function buy(pid,count=1){
+    if(islogin){
+
+        localStorage.setItem(`${pid}`,`${count}`);
+        let curranturl=window.location.href.split("/index.html").join("");
+        window.location.href=`${curranturl}/pages/cart.html`
+    }
+    else{
+        openlogin();
+        alert("Please Loging");
+    }
+}
+
+function showpage(productnm){
+    let curranturl=window.location.href.split("/index.html").join("");
+    window.location.href=`${curranturl}/pages/${productnm}.html`
+}
+
 
 
 
