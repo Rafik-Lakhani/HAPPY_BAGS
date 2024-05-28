@@ -666,11 +666,17 @@
 
         // here chackout function code
         function checkout() {
-            alert("Sorry not confirm your order please try again")
+            if(islogin){
+                alert("Sorry not confirm your order please try again")
+            }
+            else{
+                alert("Please Loging Go Home Page")
+            }
         }
 
-
+        
     </script>
+    <script src="/script.js"></script>
 </body>
 
 </html>

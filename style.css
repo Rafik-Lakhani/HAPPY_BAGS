@@ -66,7 +66,7 @@ nav{
     font-size: 30px;
 }
 
-.left-nav img {
+.left-nav  img {
     height: 70px;
     width: 70px;
 
@@ -918,6 +918,7 @@ form span{
     .bags-name{
         height: 200px;
     }
+    
 }
 
 
@@ -933,6 +934,7 @@ form span{
         display: flex;
         border: none;
         background-color: transparent;
+
     }
     .heading ,#change-item{
         font-size: 2.3rem;
@@ -1029,20 +1031,25 @@ form span{
     .glass-part{
         padding-top: 60px;
     }
-
+    .menu-div{
+        height: 50vh;
+    }
    
 }
 
 @media screen and (max-width:930px) {
     .left-nav img {
-        height: 60px;
-        width: 60px;
+        height: 80px;
+        width: 80px;
+        
     }
     .left-nav h1 {
-        font-size: 20px;
+        font-size: 25px;
     }
     #menu-icon{
         font-size: 30px;
+        top: 14px;
+        position: absolute;
     }
 
     .heading ,#change-item{
@@ -1383,15 +1390,16 @@ form span{
     }
     
     .left-nav img{
-        height: 40px;
-        width: 40px;
+        height: 70px;
+        width: 70px;
     }
 
     .left-nav h1{
-        font-size: 1.2rem;
+        font-size: 1.7rem;
     }
     #menu-icon{
-        font-size: 1.2rem;
+        font-size: 1.7rem;
+        right: 15px;
     }
 
     .right-center img{
@@ -1546,8 +1554,9 @@ form span{
     }
 
     #menu-icon{
-        font-size: 2rem;
-        margin-top: 10px;
+        font-size: 1.7rem;
+        top: 15px;
+        right: 10px;
     }
     
     .main-content{
@@ -1691,13 +1700,13 @@ form span{
     }
     .menu-div{
         padding: 10px;
-        height: 65vh;
+        height: 85vh;
         gap:50px;
         width: 100%;
         right: -100%;
         justify-content: center;
         align-items: center;
-        padding: 50px;
+        padding: 40px;
     }
     #close{
         font-size: 2.5rem;
@@ -1786,11 +1795,19 @@ form span{
     }
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width:380px){
     .heading,  #change-item{
         font-size: 1.5rem;
     }
 
+    .left-nav h1{
+        font-size: 1.3rem;
+
+    }
+    nav.left-nav img{
+        height: 40px;
+        width: 40px;
+    }
     
     .left-center p{
         font-size: 0.8rem;

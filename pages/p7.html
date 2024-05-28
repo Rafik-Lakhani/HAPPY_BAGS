@@ -30,7 +30,8 @@
             position: relative;
             margin: auto;
         }
-        .right-nav{
+
+        .right-nav {
             margin-right: 20px;
         }
 
@@ -107,7 +108,7 @@
         }
 
         .detail-part h1 {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         .price-part {
@@ -196,10 +197,6 @@
             background-color: var(--back-color2);
         }
 
-        #menu-icon {
-            top: 25px;
-            font-size: 2rem;
-        }
 
 
 
@@ -216,8 +213,10 @@
                 width: 100%;
             }
 
-            .menu-div {
-                display: none;
+
+
+            .image-part {
+                height: 80vh;
             }
 
         }
@@ -227,11 +226,14 @@
                 padding: 50px 70px;
             }
 
-            .menu-div {
-                display: none;
-            }
-            .image-section{
+
+
+            .image-section {
                 width: 100%;
+            }
+
+            .image-part {
+                height: 80vh;
             }
         }
 
@@ -244,21 +246,22 @@
             .detail-part {
                 width: 50vw;
             }
+
             .image-part {
                 height: 70%;
                 position: relative;
                 width: 100%;
             }
-            .image-section{
-                width: 100%;
-            }
-            .detail-part{
+
+            .image-section {
                 width: 100%;
             }
 
-            .menu-div {
-                display: none;
+            .detail-part {
+                width: 100%;
             }
+
+
         }
 
         @media screen and (max-width:1080px) {
@@ -266,35 +269,28 @@
                 gap: 40px;
             }
 
-            .menu-div {
-                display: none;
-            }
-            .left-nav h1 {
-                font-size: 1.8rem;
-            }
 
-            .left-nav img {
-                height: 80px;
-                width: 80px;
-            }
             .image-part {
                 position: relative;
                 width: 100%;
             }
 
-            .image-section{
+            .image-section {
                 height: 600px;
                 width: 100%;
             }
-            .other-img{
+
+            .other-img {
                 width: 100%;
                 height: 200px;
             }
-            .image-section img{
+
+            .image-section img {
                 width: 100%;
                 height: 100%;
             }
-            .detail-part{
+
+            .detail-part {
                 width: 100%;
             }
         }
@@ -308,36 +304,32 @@
 
             .image-part {
                 width: 45vw;
-                height: 60vh;
+                height: 100vh;
             }
 
             .image-section img,
             .image-section {
-                height: 40vh;
+                height: 80%;
                 width: 100%;
+            }
+
+            .other-img {
+                height: 20%;
             }
 
             .detail-part {
                 width: 50vw;
             }
 
-            .left-nav h1 {
-                font-size: 1.8rem;
-            }
 
-            .left-nav img {
-                height: 80px;
-                width: 80px;
-            }
-            .image-section,.image-section img{
-                width: 100%;
-            }
+
             .image-part {
                 height: 70%;
                 position: relative;
                 width: 100%;
             }
-            .detail-part{
+
+            .detail-part {
                 width: 100%;
             }
 
@@ -423,13 +415,14 @@
             p {
                 font-size: 13px;
             }
-            
+
             .image-part {
                 height: 70%;
                 position: relative;
                 width: 100%;
             }
-            .detail-part{
+
+            .detail-part {
                 width: 100%;
             }
         }
@@ -445,14 +438,16 @@
             }
 
             .image-section {
-                height: 40vh;
+                height: 80%;
             }
-            .other-img{
+
+            .other-img {
                 height: 150px;
                 width: 100%;
             }
-            .other-img img{
-                height:100%;
+
+            .other-img img {
+                height: 100%;
             }
 
             .detail-part h1 {
@@ -462,13 +457,14 @@
             .detail-part h5 {
                 font-size: 20px;
             }
-            
+
             .image-part {
                 height: 70%;
                 position: relative;
                 width: 100%;
             }
-            .detail-part{
+
+            .detail-part {
                 width: 100%;
             }
 
@@ -479,10 +475,12 @@
                 padding: 30px 10px;
                 gap: 40px;
             }
-            .other-img{
+
+            .other-img {
                 height: 120px;
                 width: 100%;
             }
+
             .other-img img {
                 height: 100%;
             }
@@ -490,24 +488,19 @@
             .price-part h5 {
                 font-size: 18px;
             }
-            
+
             .image-part {
-                height: 70%;
+                height: 500px;
                 position: relative;
                 width: 100%;
             }
-            .detail-part{
+
+            .image-section img {
                 width: 100%;
             }
-        }
 
-
-        /* nav responsive start from here */
-
-
-        @media(min-width: 1280px) {
-            .right-nav {
-                margin: 10px;
+            .detail-part {
+                width: 100%;
             }
         }
     </style>
@@ -545,13 +538,18 @@
         <div class="main-section">
             <div class="image-part">
                 <div class="image-section">
-                    <img src="https://skybags.co.in/cdn/shop/files/1_6_cfae77ab-fbfb-4641-a71b-8a8f91ffc8b7_1800x1800.png?v=1707918171" alt="" id="mainimage">
+                    <img src="https://skybags.co.in/cdn/shop/files/1_6_cfae77ab-fbfb-4641-a71b-8a8f91ffc8b7_1800x1800.png?v=1707918171"
+                        alt="" id="mainimage">
                 </div>
                 <div class="other-img">
-                    <img src="https://skybags.co.in/cdn/shop/files/2_9e8ebd8d-34c9-4539-ba2e-ee71db787a1b_1800x1800.jpg?v=1707918171" id="image1" onclick="changeimg(1)">
-                    <img src="https://skybags.co.in/cdn/shop/files/5_e9b0e91f-ee2c-44fd-ad5c-be96d0094ecf_1800x1800.jpg?v=1707918171" id="image2"  onclick="changeimg(2)">
-                    <img src="https://skybags.co.in/cdn/shop/files/7_5b0aff6c-2088-4ab6-bf2c-0edacbfda8ed_1800x1800.jpg?v=1707918171" id="image3"  onclick="changeimg(3)">
-                    <img src="https://skybags.co.in/cdn/shop/files/9_8f87fb2c-5bef-4717-8083-b93549330f1d_1800x1800.jpg?v=1707918171" id="image4"  onclick="changeimg(4)">
+                    <img src="https://skybags.co.in/cdn/shop/files/2_9e8ebd8d-34c9-4539-ba2e-ee71db787a1b_1800x1800.jpg?v=1707918171"
+                        id="image1" onclick="changeimg(1)">
+                    <img src="https://skybags.co.in/cdn/shop/files/5_e9b0e91f-ee2c-44fd-ad5c-be96d0094ecf_1800x1800.jpg?v=1707918171"
+                        id="image2" onclick="changeimg(2)">
+                    <img src="https://skybags.co.in/cdn/shop/files/7_5b0aff6c-2088-4ab6-bf2c-0edacbfda8ed_1800x1800.jpg?v=1707918171"
+                        id="image3" onclick="changeimg(3)">
+                    <img src="https://skybags.co.in/cdn/shop/files/9_8f87fb2c-5bef-4717-8083-b93549330f1d_1800x1800.jpg?v=1707918171"
+                        id="image4" onclick="changeimg(4)">
                 </div>
             </div>
             <div class="detail-part">
@@ -570,7 +568,7 @@
                         <button type="button" id="decrise" onclick="decrease()">-</button>
                     </div>
                     <div class="addtocart">
-                        <button onclick="addcard('p1',`${no}`)">Add to Cart</button>
+                        <button onclick="card('p7',`${no}`)">Add to Cart</button>
                     </div>
                 </div>
                 <h3>discription</h3>
@@ -647,18 +645,103 @@
             }
         }
 
-        function cart(pid) {
+        function card(pid) {
             localStorage.setItem(`${pid}`, `${no}`);
             // document.querySelector(".addtocart").style.backgroundColor="var(--text-color)"
             // document.querySelector(".addtocart").style.color="var(--back-color1)"
 
         }
 
-        function changeimg(imgid){
-            prvimg=document.querySelector("#mainimage").src;
-            nextimg=document.querySelector(`#image${imgid}`).src;
-            document.querySelector("#mainimage").src=nextimg;
-            document.querySelector(`#image${imgid}`).src=prvimg;
+        function changeimg(imgid) {
+            prvimg = document.querySelector("#mainimage").src;
+            nextimg = document.querySelector(`#image${imgid}`).src;
+            document.querySelector("#mainimage").src = nextimg;
+            document.querySelector(`#image${imgid}`).src = prvimg;
+        }
+
+        var islogin = false
+
+        function openlogin() {
+            document.querySelector('.login-page').style.display = "flex";
+            closeregister();
+            closemenu();
+        }
+
+
+
+        function closelogin() {
+            document.querySelector('.login-page').style.display = "none";
+            console.log("login cls");
+        }
+
+
+        function openregister() {
+            document.querySelector('.register-page').style.display = "flex";
+
+        }
+
+
+        function closeregister() {
+            document.querySelector('.register-page').style.display = "none";
+
+        }
+
+        function registeruser() {
+            if (true) {
+                const usernm = document.querySelector("#username");
+                const phonenm = document.querySelector("#phonenm");
+                const useremail = document.querySelector("#useremail");
+                const password = document.querySelector("#password");
+
+                localStorage.setItem("usernm", usernm.value);
+                localStorage.setItem("userphonenm", phonenm.value);
+                localStorage.setItem("useremail", useremail.value);
+                localStorage.setItem("userpassword", password.value);
+                gotoindex();
+                alert("succesfully register");
+
+
+            }
+            else {
+                alert("enter all detail");
+            }
+
+        }
+
+        function loginuser() {
+            const lngemail = document.querySelector("#lnguseremail");
+            const lngpass = document.querySelector("#lngpass");
+
+
+
+            if (lngemail.value == localStorage.getItem("useremail") && lngpass.value == localStorage.getItem("password")) {
+                gotoindex();
+                alert("successfully login");
+                islogin = true;
+            }
+            else { alert("invailide username"); }
+        }
+
+        function gotoindex() {
+            closelogin();
+            closeregister();
+            const logo = document.getElementById("logo-svg")
+            logo.classList.remove("ri-user-3-line");
+            logo.classList.add("ri-account-pin-circle-fill");
+
+
+        }
+
+
+        // here menu code
+        const menudiv = document.querySelector(".menu-div");
+        function menu() {
+            console.log("manu");
+            menudiv.style.right = "0%";
+        }
+
+        function closemenu() {
+            menudiv.style.right = "-100%";
         }
 
     </script>

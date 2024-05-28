@@ -1,4 +1,4 @@
-const islogin=false
+var islogin=false
 
 function openlogin(){
     document.querySelector('.login-page').style.display="flex";
@@ -84,14 +84,14 @@ function closemenu(){
 
 // name changing animation start frome here
 
-const nm = document.querySelector('#change-item');
+const demo = document.querySelector("#change-item");
 
 
 const bagTypes = ['office bags.', 'travelling bags.', 'trolley bags.', 'school bags.'];
 let i = 0;
 function changeAnimation() {
 
-    nm.textContent = bagTypes[i];
+    document.getElementById("change-item").textContent=bagTypes[i];
     i++;
 
     if (i === bagTypes.length) {
