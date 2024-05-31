@@ -89,7 +89,7 @@ const demo = document.querySelector("#change-item");
 
 const bagTypes = ['office bags.', 'travelling bags.', 'trolley bags.', 'school bags.'];
 let i = 0;
-function changeAnimation() {
+async function changeAnimation() {
 
     document.getElementById("change-item").textContent=bagTypes[i];
     i++;

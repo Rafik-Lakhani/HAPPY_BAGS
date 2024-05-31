@@ -256,9 +256,6 @@ nav>.center-nav {
 }
 
 @keyframes animate {
-    35%{
-        border: none;
-    }
     60%,
     30% {
         left: 100%;
@@ -1602,6 +1599,10 @@ form span{
         color: var(--text-color);
         font-size: 2rem;
        }
+
+       .price{
+        font-size: 1.2rem;
+       }
     .heading-sec h2{
         font-size: 2rem;
     }
@@ -1833,6 +1834,9 @@ form span{
     .card-heading h2{
         margin-top: 5px;
         color: var(--text-color);
+        font-size: 1.8rem;
+       }
+       .price{
         font-size: 1.8rem;
        }
 
